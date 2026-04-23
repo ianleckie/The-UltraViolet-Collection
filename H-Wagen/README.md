@@ -30,7 +30,7 @@ If the H-Wagen Sport was an exercise in restraint, the SuperSport is what happen
 
 Starting at $1,222,333
 
-### UVSpec H-Wagen Off Road SuperSport
+### UVSpec H-Wagen Off Road Sport
 
 The Off Road Sport starts with the precision and power of the H-Wagen Sport, then politely ignores everything it learned about pavement. The advanced AWD system is replaced with a proper off-road transfer case and locking differentials, trading calculated grip for mechanical certainty when the terrain stops cooperating. Lifted springs rework the tuned suspension for articulation and clearance, while custom 17" wheels wrapped in 33" tires ensure it can actually use all 476HP somewhere far away from asphalt. It’s a deliberate contradiction—high-performance engineering repurposed for low-traction chaos—built for those who see a finely tuned machine not as something to preserve, but something to test.
 
