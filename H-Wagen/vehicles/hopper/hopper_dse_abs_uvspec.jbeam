@@ -1,0 +1,16 @@
+{
+    "hopper_DSE_ABS": {
+        "information":{
+            "authors":"Diamondback",
+            "name":"Anti-Lock Braking System",
+            "value":2500,
+        },
+        "slotType" : "hopper_DSE_ABS",
+
+        "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+            {"enableABS":true},
+        ],
+    },
+}

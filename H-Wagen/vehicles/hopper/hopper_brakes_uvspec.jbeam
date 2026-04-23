@@ -1,0 +1,160 @@
+{
+"hopper_brake_F_uvspec_sport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec Sport Front Disc Brakes",
+        "value":2250,
+    },
+    "slotType" : "hopper_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_premium", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["brake_hub_5l",                 ["wheel_FR","wheelhub_FR"],     [], {"pos":{"x":-0.67, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":1.0,  "z":1.0},  "rot":{"x":0,   "y":0,   "z":0  }}],
+        ["brake_hub_5l",                 ["wheel_FL","wheelhub_FL"],     [], {"pos":{"x" :0.67, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":1.0,  "z":1.0},  "rot":{"x":0,   "y":0,   "z":180}}],
+        ["brake_disc_plain",             ["wheel_FR","wheelhub_FR"],     [], {"pos":{"x":-0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.97, "z":0.97}, "rot":{"x":0,   "y":0,   "z":0  }, "materialOverride":[["disc_brake", "disc_brake_FR"]]}],
+        ["brake_disc_plain",             ["wheel_FL","wheelhub_FL"],     [], {"pos":{"x": 0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.97, "z":0.97}, "rot":{"x":180, "y":0,   "z":0  }, "materialOverride":[["disc_brake", "disc_brake_FL"]]}],
+        ["brake_caliper_standard_plain", ["hopper_hub_F"], [], {"pos":{"x":-0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.88, "z":0.88}, "rot":{"x":180, "y":0,   "z":0  }}],
+        ["brake_caliper_standard_plain", ["hopper_hub_F"], [], {"pos":{"x": 0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.88, "z":0.88}, "rot":{"x":180, "y":180, "z":0  }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*3100"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":100},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.36},
+        {"brakeMass":10.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.5},
+        {"absSlipRatioTarget":0.2},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.2}
+    ],
+},
+"hopper_brake_F_uvspec_supersport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec SuperSport Front Disc Brakes",
+        "value":3250,
+    },
+    "slotType" : "hopper_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_premium", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["brake_hub_5l",                 ["wheel_FR","wheelhub_FR"],     [], {"pos":{"x":-0.67, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":1.0,  "z":1.0},  "rot":{"x":0,   "y":0,   "z":0  }}],
+        ["brake_hub_5l",                 ["wheel_FL","wheelhub_FL"],     [], {"pos":{"x" :0.67, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":1.0,  "z":1.0},  "rot":{"x":0,   "y":0,   "z":180}}],
+        ["brake_disc_plain",             ["wheel_FR","wheelhub_FR"],     [], {"pos":{"x":-0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.97, "z":0.97}, "rot":{"x":0,   "y":0,   "z":0  }, "materialOverride":[["disc_brake", "disc_brake_FR"]]}],
+        ["brake_disc_plain",             ["wheel_FL","wheelhub_FL"],     [], {"pos":{"x": 0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.97, "z":0.97}, "rot":{"x":180, "y":0,   "z":0  }, "materialOverride":[["disc_brake", "disc_brake_FL"]]}],
+        ["brake_caliper_standard_plain", ["hopper_hub_F"], [], {"pos":{"x":-0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.88, "z":0.88}, "rot":{"x":180, "y":0,   "z":0  }}],
+        ["brake_caliper_standard_plain", ["hopper_hub_F"], [], {"pos":{"x": 0.69, "y":-1.195, "z":0.30}, "scale":{"x":1.0, "y":0.88, "z":0.88}, "rot":{"x":180, "y":180, "z":0  }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5333"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":120},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.36},
+        {"brakeMass":4.25},
+        {"brakeType":"carbon-ceramic-vented-disc"},
+        {"rotorMaterial":"carbon-ceramic"},
+        {"brakeVentingCoef":1.3},
+        {"absSlipRatioTarget":0.18},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.5}
+    ],
+},
+"hopper_brake_R_uvspec_sport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec Sport Rear Drum Brakes",
+        "value":2500,
+    },
+    "slotType" : "hopper_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R", "Rear Brake Shoes", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["hopper_brakedrum_RR", ["wheel_RR","wheelhub_RR"]],
+        ["hopper_brakedrum_RL", ["wheel_RL","wheelhub_RL"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*2000"},
+        {"brakeInputSplit":0.65},
+        {"brakeSplitCoef":0.45},
+        {"parkingTorque":2500},
+        {"brakeSpring":120},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.32},
+        {"brakeMass":4.5},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.2},
+        {"absSlipRatioTarget":0.14},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"hopper_brake_R_uvspec_supersport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec SuperSport Rear Drum Brakes",
+        "value":3500,
+    },
+    "slotType" : "hopper_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R", "Rear Brake Shoes", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["hopper_brakedrum_RR", ["wheel_RR","wheelhub_RR"]],
+        ["hopper_brakedrum_RL", ["wheel_RL","wheelhub_RL"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5333"},
+        {"brakeInputSplit":0.65},
+        {"brakeSplitCoef":0.45},
+        {"parkingTorque":2500},
+        {"brakeSpring":80},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.32},
+        {"brakeMass":4.5},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"carbon-ceramic"},
+        {"brakeVentingCoef":1.1},
+        {"absSlipRatioTarget":0.14},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+}

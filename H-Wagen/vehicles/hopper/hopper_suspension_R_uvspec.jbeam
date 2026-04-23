@@ -1,0 +1,218 @@
+{
+"hopper_swaybar_R_uvspec_sport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec Sport Rear Sway Bar",
+        "value":1500,
+    },
+    "slotType" : "hopper_swaybar_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hopper_swaybar_R", ["hopper_swaybar_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //anti-roll
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hopper_swaybar_R"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeWeight":2.5},
+         //rear anti-roll
+         ["arbrr", -0.58, 1.12, 0.43],
+         ["arbrl", 0.58, 1.12, 0.43],
+         {"group":""},
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        //12mm 673
+        //13mm 927
+        //14mm 1247
+        //15mm 1643
+        //16mm 2128
+        {"spring":1247, "damp":10, "deform":10000, "strength":9999999},
+        ["arbrr", "f7rr", "f7ll", "arbrl"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--ANTI-ROLL--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":2501000,"beamDamp":100},
+          {"beamDeform":25000,"beamStrength":534000},
+          //end links
+          ["arbrr","ax1r"],
+          ["arbrl","ax1l"],
+          //rigids
+          ["arbrr","f7rr"],
+          ["arbrl","f7ll"],
+          ["arbrr","f7ll"],
+          ["arbrl","f7rr"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hopper_swaybar_R_uvspec_supersport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec SuperSport Rear Sway Bar",
+        "value":1500,
+    },
+    "slotType" : "hopper_swaybar_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hopper_swaybar_R", ["hopper_swaybar_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //anti-roll
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hopper_swaybar_R"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeWeight":2.5},
+         //rear anti-roll
+         ["arbrr", -0.58, 1.12, 0.43],
+         ["arbrl", 0.58, 1.12, 0.43],
+         {"group":""},
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        //12mm 673
+        //13mm 927
+        //14mm 1247
+        //15mm 1643
+        //16mm 2128
+        {"spring":1643, "damp":10, "deform":10000, "strength":9999999},
+        ["arbrr", "f7rr", "f7ll", "arbrl"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--ANTI-ROLL--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":2501000,"beamDamp":100},
+          {"beamDeform":25000,"beamStrength":534000},
+          //end links
+          ["arbrr","ax1r"],
+          ["arbrl","ax1l"],
+          //rigids
+          ["arbrr","f7rr"],
+          ["arbrl","f7ll"],
+          ["arbrr","f7ll"],
+          ["arbrl","f7rr"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hopper_spring_R_uvspec_sport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec Sport Rear Springs",
+        "value":1200,
+    },
+    "slotType" : "hopper_spring_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hopper_spring_R", ["hopper_spring_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //rear springs
+          {"beamPrecompression":1, "beamType":"|NORMAL"},
+          {"beamDeform":35000,"beamStrength":250000},
+          {"beamSpring":24000,"beamDamp":0},
+          ["axsl","f8ll", {"precompressionRange":0.025,"soundFile":"event:>Vehicle>Suspension>pickup_01>spring_compress_01","colorFactor":0.5,"attackFactor":20,"volumeFactor":1.6,"decayFactor":13,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":400}],
+          ["axsr","f8rr", {"precompressionRange":0.025,"soundFile":"event:>Vehicle>Suspension>pickup_01>spring_compress_01","colorFactor":0.5,"attackFactor":20,"volumeFactor":1.6,"decayFactor":13,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":400}],
+          //spring extents
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":101000,"beamLimitDamp":1000},
+          ["ax1r","f8rr", {"longBoundRange":0.12,"shortBoundRange":0.15,"boundZone":0.1,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          ["ax1l","f8ll", {"longBoundRange":0.12,"shortBoundRange":0.15,"boundZone":0.1,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hopper_spring_R_uvspec_supersport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec SuperSport Rear Springs",
+        "value":1200,
+    },
+    "slotType" : "hopper_spring_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hopper_spring_R", ["hopper_spring_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //rear springs
+          {"beamPrecompression":1, "beamType":"|NORMAL"},
+          {"beamDeform":35000,"beamStrength":250000},
+          {"beamSpring":20000,"beamDamp":0},
+          ["axsl","f8ll", {"precompressionRange":0.025,"soundFile":"event:>Vehicle>Suspension>pickup_01>spring_compress_01","colorFactor":0.5,"attackFactor":20,"volumeFactor":1.6,"decayFactor":13,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":400}],
+          ["axsr","f8rr", {"precompressionRange":0.025,"soundFile":"event:>Vehicle>Suspension>pickup_01>spring_compress_01","colorFactor":0.5,"attackFactor":20,"volumeFactor":1.6,"decayFactor":13,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":400}],
+          //spring extents
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":101000,"beamLimitDamp":1000},
+          ["ax1r","f8rr", {"longBoundRange":0.12,"shortBoundRange":0.15,"boundZone":0.1,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          ["ax1l","f8ll", {"longBoundRange":0.12,"shortBoundRange":0.15,"boundZone":0.1,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hopper_shock_R_uvspec_sport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec Sport Rear Shocks",
+        "value":2000,
+    },
+    "slotType" : "hopper_shock_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hopper_shock_R", ["hopper_shock_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--REAR SHOCKS--
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":35000,"beamStrength":250000},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":0,"beamDamp":5000},
+          ["axshr","rsh1r", {"beamDampFast":5000,"beamDampRebound":6000,"beamDampReboundFast":3800,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+          ["axshl","rsh1l", {"beamDampFast":5000,"beamDampRebound":6000,"beamDampReboundFast":3800,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+          //bumpstops
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":101000,"beamLimitDamp":10000},
+          ["ax1r","f8rr", {"longBoundRange":0.05,"shortBoundRange":0.12,"boundZone":0.05,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          ["ax1l","f8ll", {"longBoundRange":0.05,"shortBoundRange":0.12,"boundZone":0.05,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"hopper_shock_R_uvspec_supersport": {
+    "information":{
+        "authors":"UVSpec",
+        "name":"UVSpec SuperSport Rear Shocks",
+        "value":2000,
+    },
+    "slotType" : "hopper_shock_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hopper_shock_R", ["hopper_shock_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--REAR SHOCKS--
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":35000,"beamStrength":250000},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":0,"beamDamp":5000},
+          ["axshr","rsh1r", {"beamDampFast":6000,"beamDampRebound":6000,"beamDampReboundFast":3800,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+          ["axshl","rsh1l", {"beamDampFast":6000,"beamDampRebound":6000,"beamDampReboundFast":3800,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+          //bumpstops
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":101000,"beamLimitDamp":10000},
+          ["ax1r","f8rr", {"longBoundRange":0.05,"shortBoundRange":0.12,"boundZone":0.05,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          ["ax1l","f8ll", {"longBoundRange":0.05,"shortBoundRange":0.12,"boundZone":0.05,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+}

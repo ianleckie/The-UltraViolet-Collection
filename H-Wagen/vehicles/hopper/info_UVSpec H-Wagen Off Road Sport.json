@@ -1,0 +1,55 @@
+{
+  "0-100 km/h":11,
+  "0-60 mph":10.8,
+  "100-0 km/h":49.6,
+  "60-0 mph":152.4,
+  "BoundingBox":[
+    [
+      -0.42,
+      -2.112,
+      -0.59
+    ],
+    [
+      1.52,
+      1.708,
+      1.41
+    ]
+  ],
+  "Braking G":0.793,
+  "Config Type":"Factory",
+  "Configuration":"UVSpec H-Wagen Off Road Sport (A)",
+  "Description":"Ultra prestige. Ultra performance. UltraViolet. Presenting UVSpec from the UltraViolet Collection - the ultimate spec for the ultra discerning customer.",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"SC",
+  "InsuranceClass": "prestige",
+  "Name":"Hopper UVSpec H-Wagen Off Road Sport (A)",
+  "Off-Road Score":92,
+  "Population":13,
+  "Power":481,
+  "PowerPeakRPM":"4950 - 5850",
+  "Propulsion":"ICE",
+  "Source":"UltraViolet Collection",
+  "Top Speed":68.734674011711,
+  "Torque":745,
+  "TorquePeakRPM":"3650 - 4400",
+  "Transmission":"Automatic",
+  "Value":888888,
+  "Weight":1880,
+  "Weight/Power":3.9085239085239,
+  "defaultMultiPaintSetup":"UVSpec UltraViolet Over White",
+  "libraryPaints":[
+    {
+      "id":"uvspec_alabaster"
+    },
+    {
+      "id":"uvspec_liquid_gunmetal"
+    },
+    {
+      "id":"uvspec_violet"
+    },
+    {
+      "id":"uvspec_ultraviolet"
+    }
+  ]
+}

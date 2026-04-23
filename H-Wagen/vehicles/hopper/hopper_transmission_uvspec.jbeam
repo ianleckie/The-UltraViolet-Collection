@@ -1,0 +1,54 @@
+{
+"hopper_transfercase_AWD_uvspec": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"UVSpec AWD Transfer Case",
+        "value":3950,
+    },
+    "slotType" : "hopper_transfercase",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //lsd center diff
+        ["differential", "transfercase", "gearbox", 1, {"diffType":"lsd", "lsdPreload":50, "lsdLockCoef":0.15, "lsdRevLockCoef":0.15, "diffTorqueSplit":0.6, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Center Differential", "defaultVirtualInertia":0.1, "speedLimitCoef":0.1}],
+        //non disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hopper_transfercase", ["hopper_transmission","hopper_transfercase","hopper_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":16},
+         {"group":"hopper_transfercase"},
+         ["tra2", 0.0, 0.44, 0.43],
+         ["tra3", 0.207, -0.07, 0.408],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":99750,"beamStrength":"FLT_MAX"},
+          ["tra2","tra1"],
+
+          ["tra2","e1r"],
+          ["tra2","e1l"],
+          ["tra2","e3r"],
+          ["tra2","e3l"],
+
+          ["tra3","e1r"],
+          ["tra3","e1l"],
+          ["tra3","e3r"],
+          ["tra3","e3l"],
+
+          ["tra3","tra2"],
+          ["tra3","tra1"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "paints": {
+    "uvspec_ultraviolet": {
+      "name": "UVSpec UltraViolet",
+      "baseColor":[
+        0.494,
+        0,
+        0.957,
+        2
+      ],
+      "clearcoat":1,
+      "clearcoatRoughness":1,
+      "metallic":1,
+      "roughness":0.325
+    },
+    "uvspec_violet": {
+      "name": "UVSpec Violet",
+      "baseColor":[
+        0.43,
+        0.3,
+        0.62,
+        0.96
+      ],
+      "clearcoat":1,
+      "clearcoatRoughness":1,
+      "metallic":1,
+      "roughness":0.46
+    },
+    "uvspec_alabaster": {
+      "name": "UVSpec Alabaster",
+      "baseColor":[
+        1,
+        1,
+        1,
+        0
+      ],
+      "clearcoat":1,
+      "clearcoatRoughness":1,
+      "metallic":0.319,
+      "roughness":0.7
+    },
+    "uvspec_liquid_gunmetal": {
+      "name": "UVSpec Liquid Gunmetal",
+      "baseColor":[
+        0.37,
+        0.36,
+        0.4,
+        2
+      ],
+      "clearcoat":1,
+      "clearcoatRoughness":1,
+      "metallic":1,
+      "roughness":0.41
+    }
+  },
+  "multiPaintSetups" : {
+    "uvspec_uv_white" : {
+      "name": "UVSpec UltraViolet Over White",
+      "paint1": "uvspec_ultraviolet",
+      "paint2": "uvspec_alabaster",
+      "paint3": "uvspec_ultraviolet"
+    },
+    "uvspec_liquid_gunmetal" : {
+      "name": "UVSpec Liquid Gunmetal",
+      "paint1": "uvspec_liquid_gunmetal",
+      "paint2": "uvspec_violet",
+      "paint3": "uvspec_liquid_gunmetal"
+    }
+  }
+}
